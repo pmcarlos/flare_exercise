@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flare_flutter/flare_actor.dart';
 
 void main() => runApp(MyApp());
 
@@ -31,7 +32,12 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Text('Flare demo'),
+      body: Center(
+        child: FlareActor(
+          'assets/success_flare.flr',
+          animation: 'success',
+        ),
+      ),
     );
   }
 }
